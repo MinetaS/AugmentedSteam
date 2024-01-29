@@ -2182,6 +2182,7 @@ label.es_dlc_label > input:checked::after {
  **************************************/
 .es_market_listing_lowest {
   width: 115px;
+  font-size: 85.7%;
 }
 .es_priced_higher {
   color: #ff1717;
@@ -2239,22 +2240,20 @@ label.es_dlc_label > input:checked::after {
 #market_commodity_orders_header {
   position: relative;
 }
-.market_section_title .es_sold_amount {
-  font-size: 16px !important;
+.es_sold_amount_block {
+	margin: 1em 10px;
+  padding: 0.5em;
+	text-align: center;
+  font-size: 1.5rem;
+	border: 1px solid #000;
+	background-color: rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 14px #0d1b27 inset;
 }
-.jqplot-title .es_sold_amount,
 .market_section_title .es_sold_amount {
   z-index: 999;
-  position: relative;
   display: inline-block !important;
-}
-.jqplot-title .es_sold_amount:before,
-.market_section_title .es_sold_amount:before {
-  content: "(";
-}
-.jqplot-title .es_sold_amount:after,
-.market_section_title .es_sold_amount:after {
-  content: ")";
+  position: relative;
+  font-size: 16px !important;
 }
 
 /***************************************
@@ -3128,4 +3127,28 @@ label.es_dlc_label > input:checked::after {
  */
 .as_feature_hint_option {
   color: white;
+}
+
+/**
+ * Custom Styles
+ */
+.es_badge_switch_border {
+  float: left;
+  width: min-content;
+  margin-left: 1em;
+  padding: 0.2em 0.5em;
+  display: block;
+  position: relative;
+  z-index: 4;
+  background-color: #208020;
+  border: 1px solid #007000;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #108010;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
 }

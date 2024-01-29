@@ -161,24 +161,6 @@ class AugmentedSteam {
         }
     }
 
-    static _addUsernameSubmenuLinks() {
-        // There are two menus; one for responsive (mobile) and one for "unresponsive" (desktop) design
-        for (const node of document.querySelectorAll(".submenu_username")) {
-            HTML.afterEnd(
-                node.querySelector("a"),
-                `<a class="submenuitem" href="//steamcommunity.com/my/games/">${Localization.str.games}</a>`
-            );
-            HTML.afterEnd(
-                node.querySelector("a:nth-child(2)"),
-                `<a class="submenuitem" href="//store.steampowered.com/wishlist/">${Localization.str.wishlist}</a>`
-            );
-            HTML.beforeEnd(
-                node,
-                `<a class="submenuitem" href="//steamcommunity.com/my/recommended/">${Localization.str.reviews}</a>`
-            );
-        }
-    }
-
     static _cartLink() {
         // There are two menus; one for responsive (mobile) and one for "unresponsive" (desktop) design
         for (const wishlistLink of document.querySelectorAll(".submenu_store > .submenuitem[href='https://steamcommunity.com/my/wishlist/']")) {
@@ -269,7 +251,6 @@ class AugmentedSteam {
         AugmentedSteam._cartLink();
 
         if (User.isSignedIn) {
-            AugmentedSteam._addUsernameSubmenuLinks();
             AugmentedSteam._addRedeemLink();
             AugmentedSteam._launchRandomButton();
             AugmentedSteam._bindLogout();
